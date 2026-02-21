@@ -1,3 +1,20 @@
+:root {
+  --color-bg-dark: transparent;
+  --color-bg: #fdfffd;
+  --color-gray: #d1d1d1;
+  --color-text: black;
+  --color-accent: pink;
+  --color-white: #fff;
+  --color-scrollbar: #aaa7a7;
+}
+
+html.dark {
+  --color-bg-dark: #1a1c35;
+  --color-bg: #22243b;
+  --color-gray: #4e4e4e;
+  --color-text: #fdfffd;
+}
+
 body {
   margin: 0;
   width: 100vw;

@@ -1,25 +1,31 @@
 .form {
   width: 100%;
   display: flex;
+  padding: 1.4rem 1rem;
+  background-color: var(--color-bg-dark);
 
 }
 .input{
   flex: 1 0 auto;
   padding: 0 10px;
+  font-size: 1.4rem;
   border: none;
   outline: none;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  background-color: rgb(202, 202, 202);
+  background-color: #fff;
 }
 .button {
   cursor: pointer;
-  background-color: pink;
-  color: #fff;
+  background-color: var(--color-accent);
+  color: var(--color-white);
   font-weight: bold;
   font-size: 1.5rem;
   padding: 0 2rem;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+}
 
+.button:hover {
+  filter: brightness(125%);
 }
