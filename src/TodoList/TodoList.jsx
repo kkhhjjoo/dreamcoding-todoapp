@@ -8,7 +8,7 @@ const TodoList = () => {
   return (
     <section>
       <ul>
-        {todos, map((item) => <li key={item.id}>{ item.text}</li>)}
+        {todos.map((item) => <li key={item.id}>{ item.text}</li>)}
       </ul>
     </section>
   )
