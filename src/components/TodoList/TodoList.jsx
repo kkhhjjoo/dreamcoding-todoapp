@@ -12,14 +12,21 @@ const TodoList = ({filter}) => {
   const handleUpdate = (updated) => setTodos(todos.map(t => t.id === updated.id ? updated : t));
 
   const handleDelete = (deleted) => setTodos(todos.filter(t => t.id !== deleted.id));
+
+  const filtered = getFilterItems(todos, filter);
   return (
     <section>
       <ul>
-        {todos.map((item) => <Todo key={item.id} todo={item} onUpdate={handleUpdate} onDelete={handleDelete}>{item.text}</Todo>)}
+        {filtered.map((item) => <Todo key={item.id} todo={item} onUpdate={handleUpdate} onDelete={handleDelete}>{item.text}</Todo>)}
       </ul>
       <AddTodo onAdd={handleAdd} />
     </section>
   )
 }
-
+function getFilterItems(todos, filter) { 
+  if (filter === 'all') { 
+    return todos;
+  }
+  return todos.filter(todo => todo.status === filter);
+}
 export default TodoList
