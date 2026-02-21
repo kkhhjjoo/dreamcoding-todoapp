@@ -17,8 +17,8 @@ const TodoList = ({filter}) => {
 
   const filtered = getFilterItems(todos, filter);
   return (
-    <section>
-      <ul>
+    <section className={styles.container}>
+      <ul className={styles.list}>
         {filtered.map((item) => <Todo key={item.id} todo={item} onUpdate={handleUpdate} onDelete={handleDelete}>{item.text}</Todo>)}
       </ul>
       <AddTodo onAdd={handleAdd} />
