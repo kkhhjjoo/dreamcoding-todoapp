@@ -4,14 +4,14 @@ import { FaRegTrashAlt } from "react-icons/fa";
 const Todo = ({ todo, onUpdate, onDelete}) => {
   const { text, status, id } = todo;
   const handleChange = (e) => { 
-    onUpdate({ ...todo, status: e.target.checked ? 'complete' : 'active' });
+    onUpdate({ ...todo, status: e.target.checked ? 'completed' : 'active' });
   }
   const handleDelete = () => { 
     onDelete(todo);
   }
   return (
     <li>
-      <input type="checkbox" id={id} checked={status === 'complete'} onChange={handleChange} />
+      <input type="checkbox" id={id} checked={status === 'completed'} onChange={handleChange} />
       <label htmlFor={id}>{text}</label>
       <span>
         <button onClick={handleDelete}><FaRegTrashAlt /></button>
